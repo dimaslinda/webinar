@@ -18,7 +18,8 @@
     --font-prompt: "Prompt", ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
-    --color-primary: #ffb43f;
-    --color-secondary: #1e1e1e;
+    --color-primary: #f46619;
+    --color-secondary: #084e49;
     --color-tertiary: #242424;
+    --color-biru: #00abaf;
 }
