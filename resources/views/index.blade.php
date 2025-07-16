@@ -111,7 +111,7 @@
                     </div>
                 </div>
                 <div class="flex w-full justify-center text-center py-5">
-                    <a href="#" target="_blank"
+                    <a href="{{ route('daftar') }}" target="_blank"
                         class="text-white capitalize font-semibold text-xl md:text-3xl py-5 px-10 bg-primary transition-all duration-300 ease-in-out rounded-lg shadow-lg hover:bg-secondary hover:scale-105 hover:shadow-2xl hover:-translate-y-1 hover:ring-4 hover:ring-orange-200">
                         Daftar Sekarang
                     </a>
@@ -441,7 +441,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" target="_blank"
+                    <a href="{{ route('daftar') }}" target="_blank"
                         class="mt-8 bg-primary cursror-pointer text-center hover:bg-orange-600 text-white font-semibold py-3 px-10 text-2xl shadow-md transition">
                         Daftar Sekarang
                     </a>

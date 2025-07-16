@@ -9,7 +9,7 @@ Route::get('/', function () {
 });
 
 // Route form registrasi webinar publik
-Route::get('/daftar', [PublicWebinarRegistrationController::class, 'showForm']);
+Route::get('/daftar', [PublicWebinarRegistrationController::class, 'showForm'])->name('daftar');
 Route::post('/daftar', [PublicWebinarRegistrationController::class, 'submitForm']);
 
 // Route invoice pembayaran
