@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Webinar Excellent Team</title>
+    <title>Webinar Gak Pakai AI Sama Dengan Jemput Bangkrut</title>
     <!-- Meta Description untuk SEO -->
     <meta name="description"
         content="Ikuti webinar 'Gak Pakai AI Sama Dengan Jemput Bangkrut' dan pelajari strategi gila masuk market dengan bantuan AI. Cocok untuk pebisnis, startup, digital marketer, dan siapa saja yang ingin scale bisnis dengan AI.">
 
     <!-- Meta Keywords untuk SEO -->
     <meta name="keywords"
-        content="webinar AI, bisnis AI, market hacking, artificial intelligence, digital marketing, scale bisnis, startup, freelancer, strategi bisnis, webinar Indonesia, pelatihan AI, AI untuk bisnis, jemput bangkrut, webinar excellent team">
+        content="webinar AI, bisnis AI, market hacking, artificial intelligence, digital marketing, scale bisnis, startup, freelancer, strategi bisnis, webinar Indonesia, pelatihan AI, AI untuk bisnis, jemput bangkrut, Webinar Gak Pakai AI Sama Dengan Jemput Bangkrut">
 
     <!-- Open Graph Meta Tags untuk Social Media -->
     <meta property="og:title" content="Webinar Gak Pakai AI Sama Dengan Jemput Bangkrut">
@@ -20,15 +20,15 @@
         content="Strategi gila masuk market dalam sekejap dengan bantuan AI. Daftar sekarang dan jangan sampai bisnis kamu ketinggalan zaman!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:image" content="{{ asset('img/general/og-banner.webp') }}">
-    <meta property="og:site_name" content="Webinar Excellent Team">
+    <meta property="og:image" content="{{ asset('img/general/bg-banner.webp') }}">
+    <meta property="og:site_name" content="Webinar Gak Pakai AI Sama Dengan Jemput Bangkrut">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Webinar Gak Pakai AI Sama Dengan Jemput Bangkrut">
     <meta name="twitter:description"
         content="Strategi gila masuk market dalam sekejap dengan bantuan AI. Daftar sekarang dan scale bisnismu!">
-    <meta name="twitter:image" content="{{ asset('img/general/og-banner.webp') }}">
+    <meta name="twitter:image" content="{{ asset('img/general/bg-banner.webp') }}">
 
     <!-- Catatan: Gambar og:image dan twitter:image pastikan tersedia di folder public/img/general/ -->
 
@@ -40,6 +40,8 @@
         rel="stylesheet">
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+
 </head>
 
 <body class="font-poppins">
@@ -49,7 +51,7 @@
         </div>
         <div class="container mx-auto p-6 py-20">
             <div class="flex justify-center mb-5">
-                <img src="{{ asset('img/general/logo.png') }}" class="w-32 xl:w-52" alt="logo">
+                <img src="{{ asset('img/general/logo-putih.png') }}" class="w-32 xl:w-52" alt="logo">
             </div>
             <div class="flex flex-col items-center justify-center">
                 <span class="text-white relative text-2xl lg:text-6xl mb-5 uppercase font-light tracking-[0.5em]">
@@ -291,7 +293,7 @@
                                 fill="white" />
                         </svg>
                         <div class="text-white text-base">
-                            E-book “Blueprint Go-<br>To-Market dengan AI”
+                            E-book "Blueprint Go-<br>To-Market dengan AI"
                         </div>
                     </div>
                     <!-- Card 3 -->
@@ -331,7 +333,7 @@
                         </svg>
                         <div class="text-white text-base">
                             Penawaran Eksklusif<br>
-                            Training 3 Hari “Market Hacking with AI”
+                            Training 3 Hari "Market Hacking with AI"
                         </div>
                     </div>
                 </div>
@@ -419,7 +421,7 @@
                         Amna Hamdalah
                     </div>
                     <div class="text-white font-light text-xl mb-5">
-                        Mudir Rumah Qur’an Prapanca
+                        Mudir Rumah Qur'an Prapanca
                     </div>
                     <div class="text-white italic font-light text-justify text-sm leading-normal">
                         Gak pakai teori panjang. Langsung praktik. Hasilnya? Dalam 1 minggu saya sudah pakai semua
@@ -520,55 +522,6 @@
                                     fill="white" />
                             </svg>
                         </a>
-                    </div>
-                </div>
-                <div class="flex-1">
-                    <div>
-                        <ul class="font-medium text-white">
-                            <li class="mb-4 text-sm md:text-base">
-                                <div class="flex items-center self-center gap-5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
-                                        viewBox="0 0 26 26" fill="none">
-                                        <path
-                                            d="M4.33333 4.3335H21.6667C22.8583 4.3335 23.8333 5.3085 23.8333 6.50016V19.5002C23.8333 20.6918 22.8583 21.6668 21.6667 21.6668H4.33333C3.14167 21.6668 2.16667 20.6918 2.16667 19.5002V6.50016C2.16667 5.3085 3.14167 4.3335 4.33333 4.3335Z"
-                                            stroke="white" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path d="M23.8333 6.5L13 14.0833L2.16667 6.5" stroke="white" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg> inovasikadigital@gmail.com
-                                </div>
-                            </li>
-                            <li class="mb-4 text-sm md:text-base">
-                                <div class="flex items-center self-center gap-5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24" fill="none">
-                                        <path
-                                            d="M22 16.9201V19.9201C22.0011 20.1986 21.9441 20.4743 21.8325 20.7294C21.7209 20.9846 21.5573 21.2137 21.3521 21.402C21.1469 21.5902 20.9046 21.7336 20.6407 21.8228C20.3769 21.912 20.0974 21.9452 19.82 21.9201C16.7428 21.5857 13.787 20.5342 11.19 18.8501C8.77383 17.3148 6.72534 15.2663 5.19 12.8501C3.49998 10.2413 2.44824 7.27109 2.12 4.1801C2.09501 3.90356 2.12787 3.62486 2.2165 3.36172C2.30513 3.09859 2.44757 2.85679 2.63477 2.65172C2.82196 2.44665 3.0498 2.28281 3.30379 2.17062C3.55778 2.05843 3.83234 2.00036 4.11 2.0001H7.11C7.59531 1.99532 8.06579 2.16718 8.43376 2.48363C8.80173 2.80008 9.04208 3.23954 9.11 3.7201C9.23662 4.68016 9.47145 5.62282 9.81 6.5301C9.94454 6.88802 9.97366 7.27701 9.89391 7.65098C9.81415 8.02494 9.62886 8.36821 9.36 8.6401L8.09 9.9101C9.51356 12.4136 11.5865 14.4865 14.09 15.9101L15.36 14.6401C15.6319 14.3712 15.9752 14.1859 16.3491 14.1062C16.7231 14.0264 17.1121 14.0556 17.47 14.1901C18.3773 14.5286 19.3199 14.7635 20.28 14.8901C20.7658 14.9586 21.2094 15.2033 21.5265 15.5776C21.8437 15.9519 22.0122 16.4297 22 16.9201Z"
-                                            stroke="white" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg> 0852-1329-8462
-                                </div>
-                            </li>
-                            <li class="text-sm md:text-base">
-                                <div class="flex items-center self-center gap-5">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24" fill="none">
-                                        <path
-                                            d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
-                                            stroke="white" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                        <path
-                                            d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
-                                            stroke="white" stroke-width="2" stroke-linecap="round"
-                                            stroke-linejoin="round" />
-                                    </svg>
-                                    Perum Palem Ganda Asri, <br> Jl. Tupai Raya PGA No.1, Meruyung, <br
-                                        class="hidden sm:block"> Kec. Limo,
-                                    Kota
-                                    Depok, Jawa Barat 16512
-                                </div>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>

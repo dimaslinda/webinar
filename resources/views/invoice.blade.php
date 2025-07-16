@@ -12,7 +12,7 @@
     <div class="w-full max-w-xl mx-auto p-4">
         <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 border-t-8" style="border-color: #084e49;">
             <div class="flex justify-center mb-4">
-                <img src="/img/general/logo.png" alt="Logo" class="h-16">
+                <img src="/img/general/logo-invoice.png" alt="Logo" class="h-16">
             </div>
             <h2 class="text-2xl font-bold mb-2 text-[#084e49] text-center">Invoice Pembayaran Webinar</h2>
             <div class="w-16 h-1 mx-auto mb-4 rounded-full" style="background:#f46619;"></div>
@@ -20,7 +20,7 @@
             <table class="mb-6 w-full">
                 <tr>
                     <td class="py-1 font-semibold text-gray-700">Tanggal</td>
-                    <td>: {{ $registrant->created_at->format('d-m-Y H:i') }}</td>
+                    <td>: {{ $registrant->created_at->timezone('Asia/Jakarta')->format('d-m-Y H:i') }}</td>
                 </tr>
                 <tr>
                     <td class="py-1 font-semibold text-gray-700">No Invoice</td>
@@ -76,7 +76,7 @@
             @endif
 
             <div class="flex flex-col items-center gap-3">
-                <a href="{{ route('invoice.download', $registrant->id) }}"
+                <a href="{{ route('invoice.download', [$registrant->id, $registrant->invoice_token]) }}"
                     class="inline-block px-6 py-2 bg-[#f46619] hover:bg-[#e05a13] text-white font-semibold rounded-lg shadow transition">Download
                     PDF Invoice</a>
                 <a href="/"

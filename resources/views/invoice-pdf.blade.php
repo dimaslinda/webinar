@@ -71,7 +71,8 @@
 
 <body>
     <div class="header">
-        <img src="{{ public_path('img/general/logo.png') }}" alt="Logo" style="height:60px; margin-bottom:12px;">
+        <img src="{{ public_path('img/general/logo-invoice.png') }}" alt="Logo"
+            style="height:60px; margin-bottom:12px;">
         <div class="title">Invoice Pembayaran Webinar</div>
         <div class="divider"></div>
         <div class="subtitle">Bukti pembayaran peserta webinar</div>

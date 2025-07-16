@@ -19,9 +19,12 @@ class InvoiceController extends Controller
     }
 
     // Download invoice sebagai PDF
-    public function download($id)
+    public function download($id, $token)
     {
         $registrant = WebinarRegistrant::findOrFail($id);
+        if ($registrant->invoice_token !== $token) {
+            abort(403, 'Akses invoice tidak valid.');
+        }
         $pdf = Pdf::loadView('invoice-pdf', compact('registrant'));
         return $pdf->download('invoice-webinar-' . $registrant->id . '.pdf');
     }

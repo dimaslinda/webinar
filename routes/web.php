@@ -14,7 +14,7 @@ Route::post('/daftar', [PublicWebinarRegistrationController::class, 'submitForm'
 
 // Route invoice pembayaran
 Route::get('/invoice/{id}/{token}', [\App\Http\Controllers\InvoiceController::class, 'show'])->name('invoice.show');
-Route::get('/invoice/download/{id}', [\App\Http\Controllers\InvoiceController::class, 'download'])->name('invoice.download');
+Route::get('/invoice/download/{id}/{token}', [\App\Http\Controllers\InvoiceController::class, 'download'])->name('invoice.download');
 
 Route::get('/invoice', function (\Illuminate\Http\Request $request) {
     $orderId = $request->query('order_id');
@@ -23,9 +23,4 @@ Route::get('/invoice', function (\Illuminate\Http\Request $request) {
     }
     $registrant = \App\Models\WebinarRegistrant::where('order_id', $orderId)->firstOrFail();
     return redirect()->route('invoice.show', $registrant->id);
-});
-
-Route::get('/invoice/{id}/download', function (\Illuminate\Http\Request $request, $id) {
-    $registrant = \App\Models\WebinarRegistrant::findOrFail($id);
-    return redirect()->route('invoice.download', $registrant->id);
 });
