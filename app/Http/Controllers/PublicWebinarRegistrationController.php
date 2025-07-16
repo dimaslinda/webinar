@@ -77,6 +77,9 @@ class PublicWebinarRegistrationController extends Controller
             return $newRegistrant;
         });
 
-        return redirect()->away('https://app.sandbox.midtrans.com/snap/v2/vtweb/' . $registrant->snap_token);
+        $url = config('services.midtrans.is_production')
+            ? 'https://app.midtrans.com/snap/v2/vtweb/'
+            : 'https://app.sandbox.midtrans.com/snap/v2/vtweb/';
+        return redirect()->away($url . $registrant->snap_token);
     }
 }
