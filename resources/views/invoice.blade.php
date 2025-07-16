@@ -62,6 +62,19 @@
                 </tr>
             </table>
 
+            @php
+                $midtransUrl = config('services.midtrans.is_production')
+                    ? 'https://app.midtrans.com/snap/v2/vtweb/'
+                    : 'https://app.sandbox.midtrans.com/snap/v2/vtweb/';
+            @endphp
+            @if ($registrant->is_paid != 1 && $registrant->snap_token)
+                <div class="flex flex-col items-center gap-3 mb-4">
+                    <a href="{{ $midtransUrl . $registrant->snap_token }}" target="_blank"
+                        class="inline-block px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg shadow transition">Bayar
+                        Sekarang</a>
+                </div>
+            @endif
+
             <div class="flex flex-col items-center gap-3">
                 <a href="{{ route('invoice.download', $registrant->id) }}"
                     class="inline-block px-6 py-2 bg-[#f46619] hover:bg-[#e05a13] text-white font-semibold rounded-lg shadow transition">Download

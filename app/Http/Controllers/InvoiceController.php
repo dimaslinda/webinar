@@ -9,10 +9,10 @@ use Barryvdh\DomPDF\Facade\Pdf;
 class InvoiceController extends Controller
 {
     // Tampilkan halaman invoice pembayaran
-    public function show($id, \Illuminate\Http\Request $request)
+    public function show($id, $token)
     {
         $registrant = WebinarRegistrant::findOrFail($id);
-        if ($registrant->invoice_token !== $request->query('token')) {
+        if ($registrant->invoice_token !== $token) {
             abort(403, 'Akses invoice tidak valid.');
         }
         return view('invoice', compact('registrant'));

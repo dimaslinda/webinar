@@ -47,8 +47,8 @@
                 <!-- No HP -->
                 <div>
                     <label for="phone" class="block mb-1 font-medium text-gray-700">No. HP *</label>
-                    <input type="text" id="phone" name="phone" required value="{{ old('phone') }}"
-                        placeholder="08xxxxxxxxxx"
+                    <input type="tel" id="phone" name="phone" required value="{{ old('phone') }}"
+                        placeholder="08xxxxxxxxxx" pattern="[0-9]*" inputmode="numeric"
                         class="block w-full rounded-lg border-gray-300 focus:border-blue-500 focus:ring-blue-500 shadow-sm">
                 </div>
                 <!-- Domisili -->

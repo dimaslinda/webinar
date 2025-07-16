@@ -6,6 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Webinar Excellent Team</title>
+    <!-- Meta Description untuk SEO -->
+    <meta name="description"
+        content="Ikuti webinar 'Gak Pakai AI Sama Dengan Jemput Bangkrut' dan pelajari strategi gila masuk market dengan bantuan AI. Cocok untuk pebisnis, startup, digital marketer, dan siapa saja yang ingin scale bisnis dengan AI.">
+
+    <!-- Meta Keywords untuk SEO -->
+    <meta name="keywords"
+        content="webinar AI, bisnis AI, market hacking, artificial intelligence, digital marketing, scale bisnis, startup, freelancer, strategi bisnis, webinar Indonesia, pelatihan AI, AI untuk bisnis, jemput bangkrut, webinar excellent team">
+
+    <!-- Open Graph Meta Tags untuk Social Media -->
+    <meta property="og:title" content="Webinar Gak Pakai AI Sama Dengan Jemput Bangkrut">
+    <meta property="og:description"
+        content="Strategi gila masuk market dalam sekejap dengan bantuan AI. Daftar sekarang dan jangan sampai bisnis kamu ketinggalan zaman!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('img/general/og-banner.webp') }}">
+    <meta property="og:site_name" content="Webinar Excellent Team">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Webinar Gak Pakai AI Sama Dengan Jemput Bangkrut">
+    <meta name="twitter:description"
+        content="Strategi gila masuk market dalam sekejap dengan bantuan AI. Daftar sekarang dan scale bisnismu!">
+    <meta name="twitter:image" content="{{ asset('img/general/og-banner.webp') }}">
+
+    <!-- Catatan: Gambar og:image dan twitter:image pastikan tersedia di folder public/img/general/ -->
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -166,8 +192,8 @@
                         class="bg-biru rounded-tl-[48px] rounded-tr-lg rounded-br-lg rounded-bl-lg shadow-lg p-8 w-full max-w-sm flex flex-col">
                         <div class="text-white text-3xl md:text-5xl font-extrabold mb-5">SESI 1</div>
                         <div class="flex items-center text-base font-extrabold mb-4 gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="27" viewBox="0 0 25 27"
-                                fill="none">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="27"
+                                viewBox="0 0 25 27" fill="none">
                                 <path
                                     d="M13.242 26.1424L13.2282 26.1449L13.1395 26.1886L13.1145 26.1936L13.097 26.1886L13.0082 26.1449C12.9949 26.1407 12.9849 26.1428 12.9782 26.1511L12.9732 26.1636L12.952 26.6986L12.9582 26.7236L12.9707 26.7399L13.1007 26.8324L13.1195 26.8374L13.1345 26.8324L13.2645 26.7399L13.2795 26.7199L13.2845 26.6986L13.2632 26.1649C13.2599 26.1515 13.2528 26.144 13.242 26.1424ZM13.5732 26.0011L13.557 26.0036L13.3257 26.1199L13.3132 26.1324L13.3095 26.1461L13.332 26.6836L13.3382 26.6986L13.3482 26.7074L13.5995 26.8236C13.6153 26.8278 13.6274 26.8245 13.6357 26.8136L13.6407 26.7961L13.5982 26.0286C13.594 26.0136 13.5857 26.0045 13.5732 26.0011ZM12.6795 26.0036C12.6739 26.0003 12.6674 25.9992 12.6611 26.0006C12.6548 26.002 12.6493 26.0058 12.6457 26.0111L12.6382 26.0286L12.5957 26.7961C12.5965 26.8111 12.6036 26.8211 12.617 26.8261L12.6357 26.8236L12.887 26.7074L12.8995 26.6974L12.9045 26.6836L12.9257 26.1461L12.922 26.1311L12.9095 26.1186L12.6795 26.0036Z"
                                     fill="#ffff" />
@@ -327,15 +353,18 @@
                                 <span>Pemilik bisnis & startup yang ingin tumbuh cepat</span>
                             </li>
                             <li class="flex items-start gap-2">
-                                <img src="{{ asset('img/general/list.webp') }}" alt="list icon" class="w-5 h-5 mt-1">
+                                <img src="{{ asset('img/general/list.webp') }}" alt="list icon"
+                                    class="w-5 h-5 mt-1">
                                 <span>Digital marketer & tim promosi</span>
                             </li>
                             <li class="flex items-start gap-2">
-                                <img src="{{ asset('img/general/list.webp') }}" alt="list icon" class="w-5 h-5 mt-1">
+                                <img src="{{ asset('img/general/list.webp') }}" alt="list icon"
+                                    class="w-5 h-5 mt-1">
                                 <span>Entrepreneur & freelancer yang ingin scale layanan</span>
                             </li>
                             <li class="flex items-start gap-2">
-                                <img src="{{ asset('img/general/list.webp') }}" alt="list icon" class="w-5 h-5 mt-1">
+                                <img src="{{ asset('img/general/list.webp') }}" alt="list icon"
+                                    class="w-5 h-5 mt-1">
                                 <span>Siapa pun yang ingin belajar AI secara praktis untuk ekspansi market</span>
                             </li>
                         </ul>
@@ -390,7 +419,7 @@
                         Amna Hamdalah
                     </div>
                     <div class="text-white font-light text-xl mb-5">
-                        Murid Rumah Qur’an Prapanca
+                        Mudir Rumah Qur’an Prapanca
                     </div>
                     <div class="text-white italic font-light text-justify text-sm leading-normal">
                         Gak pakai teori panjang. Langsung praktik. Hasilnya? Dalam 1 minggu saya sudah pakai semua

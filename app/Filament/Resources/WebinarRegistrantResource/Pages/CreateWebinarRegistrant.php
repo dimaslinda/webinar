@@ -44,6 +44,8 @@ class CreateWebinarRegistrant extends CreateRecord
     {
         $registrant = $this->record;
         $midtrans = new MidtransService();
+        // Simpan dulu agar id pasti ada
+        $registrant->save();
         // Siapkan parameter pembayaran
         $params = [
             'transaction_details' => [
@@ -55,16 +57,24 @@ class CreateWebinarRegistrant extends CreateRecord
                 'email' => $registrant->email,
                 'phone' => $registrant->phone,
             ],
+            'callbacks' => [
+                'finish' => url('/invoice/' . $registrant->id . '/' . $registrant->invoice_token),
+                'unfinish' => url('/invoice/' . $registrant->id . '/' . $registrant->invoice_token),
+                'error' => url('/invoice/' . $registrant->id . '/' . $registrant->invoice_token),
+            ],
         ];
         // Generate Snap Token
         $snapToken = $midtrans->createSnapToken($params);
         // Simpan Snap Token ke database
         $registrant->snap_token = $snapToken;
         $registrant->save();
+        $midtransUrl = config('services.midtrans.is_production')
+            ? 'https://app.midtrans.com/snap/v2/vtweb/'
+            : 'https://app.sandbox.midtrans.com/snap/v2/vtweb/';
         // Tampilkan notifikasi sukses dengan link pembayaran
         Notification::make()
             ->title('Registrasi Berhasil')
-            ->body('Klik <a href="https://app.sandbox.midtrans.com/snap/v2/vtweb/' . $snapToken . '" target="_blank">di sini</a> untuk melakukan pembayaran.')
+            ->body('Klik <a href="' . $midtransUrl . $snapToken . '" target="_blank">di sini</a> untuk melakukan pembayaran.')
             ->success()
             ->send();
     }

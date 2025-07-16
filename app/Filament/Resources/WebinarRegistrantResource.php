@@ -35,7 +35,7 @@ class WebinarRegistrantResource extends Resource
                 // Email peserta
                 TextInput::make('email')->label('Email')->email()->required(),
                 // Nomor HP peserta
-                TextInput::make('phone')->label('No. HP')->required(),
+                TextInput::make('phone')->label('No. HP')->required()->numeric()->minLength(8)->maxLength(20),
                 // Domisili peserta
                 TextInput::make('domicile')->label('Domisili')->required(),
                 // Nama perusahaan (opsional)

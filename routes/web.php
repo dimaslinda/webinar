@@ -13,8 +13,8 @@ Route::get('/daftar', [PublicWebinarRegistrationController::class, 'showForm'])-
 Route::post('/daftar', [PublicWebinarRegistrationController::class, 'submitForm']);
 
 // Route invoice pembayaran
-Route::get('/invoice/{id}', [InvoiceController::class, 'show'])->name('invoice.show');
-Route::get('/invoice/{id}/download', [InvoiceController::class, 'download'])->name('invoice.download');
+Route::get('/invoice/{id}/{token}', [\App\Http\Controllers\InvoiceController::class, 'show'])->name('invoice.show');
+Route::get('/invoice/download/{id}', [\App\Http\Controllers\InvoiceController::class, 'download'])->name('invoice.download');
 
 Route::get('/invoice', function (\Illuminate\Http\Request $request) {
     $orderId = $request->query('order_id');

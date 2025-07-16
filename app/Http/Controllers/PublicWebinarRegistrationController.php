@@ -22,13 +22,22 @@ class PublicWebinarRegistrationController extends Controller
         $data = $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:webinar_registrants,email',
-            'phone' => 'required|string|max:20',
+            'phone' => 'required|regex:/^[0-9]+$/|min:8|max:20',
             'domicile' => 'required|string|max:255',
             'company_name' => 'nullable|string|max:255',
             'business_field' => 'required|string|max:255',
             'info_source' => 'required|string|max:255',
             'income_range' => 'required|string|max:255',
-            'referred_by' => 'nullable|string|size:8',
+            'referred_by' => [
+                'nullable',
+                'string',
+                'size:8',
+                function ($attribute, $value, $fail) {
+                    if (!empty($value) && !\App\Models\WebinarRegistrant::where('referral_code', $value)->exists()) {
+                        $fail('Referral code is invalid.');
+                    }
+                }
+            ],
         ]);
 
         $registrant = DB::transaction(function () use ($data, $midtrans) {
@@ -50,9 +59,14 @@ class PublicWebinarRegistrationController extends Controller
             $data['invoice_token'] = Str::uuid();
 
             $newRegistrant = new WebinarRegistrant($data);
-
             $price = config('services.webinar.price', 50000);
             $orderId = 'WEBINAR-' . Str::uuid();
+            $newRegistrant->order_id = $orderId;
+            $newRegistrant->product_name = 'Webinar Bisnis';
+            $newRegistrant->product_price = $price;
+            $newRegistrant->save(); // Simpan dulu agar id terisi
+
+            // Setelah id terisi, buat Snap Token dengan callbacks yang mengandung id dan token
             $params = [
                 'transaction_details' => [
                     'order_id' => $orderId,
@@ -64,15 +78,12 @@ class PublicWebinarRegistrationController extends Controller
                     'phone' => $newRegistrant->phone,
                 ],
                 'callbacks' => [
-                    'finish' => url('/invoice/' . $newRegistrant->id . '?token=' . $data['invoice_token']),
-                    'unfinish' => url('/invoice/' . $newRegistrant->id . '?token=' . $data['invoice_token']),
-                    'error' => url('/invoice/' . $newRegistrant->id . '?token=' . $data['invoice_token']),
+                    'finish' => url('/invoice/' . $newRegistrant->id . '/' . $newRegistrant->invoice_token),
+                    'unfinish' => url('/invoice/' . $newRegistrant->id . '/' . $newRegistrant->invoice_token),
+                    'error' => url('/invoice/' . $newRegistrant->id . '/' . $newRegistrant->invoice_token),
                 ],
             ];
-            $newRegistrant->order_id = $orderId;
             $newRegistrant->snap_token = $midtrans->createSnapToken($params);
-            $newRegistrant->product_name = 'Webinar Bisnis';
-            $newRegistrant->product_price = $price;
             $newRegistrant->save();
             return $newRegistrant;
         });
