@@ -352,7 +352,7 @@
 
     <section class="lg:py-20">
         <div class="container mx-auto p-6">
-            <div class="flex">
+            <div class="flex justify-center text-center">
                 <div class="text-secondary text-4xl md:text-5xl lg:text-7xl 2xl:text-8xl capitalize font-bold">
                     Testimoni <br>
                     <span class="text-white bg-primary font-bold leading-snug px-2">alumnni</span>
