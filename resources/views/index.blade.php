@@ -41,6 +41,25 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    @php
+        $schema = [
+            '@context' => 'https://schema.org',
+            '@type' => 'Event',
+            'name' => 'Webinar Gak Pakai AI Sama Dengan Jemput Bangkrut',
+            'startDate' => '2025-07-25T12:00:00+07:00',
+            'endDate' => '2025-07-25T15:30:00+07:00',
+            'eventAttendanceMode' => 'https://schema.org/OnlineEventAttendanceMode',
+            'eventStatus' => 'https://schema.org/EventScheduled',
+            'location' => 'Online',
+            'image' => asset('img/general/bg-banner.webp'),
+            'description' =>
+                'Strategi gila masuk market dalam sekejap dengan bantuan AI. Cocok untuk pebisnis, startup, digital marketer, dan siapa saja yang ingin scale bisnis dengan AI.',
+            'organizer' => 'Inovasika Digital',
+        ];
+    @endphp
+    <script type="application/ld+json">
+        {!! json_encode($schema, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}
+    </script>
 
 </head>
 
