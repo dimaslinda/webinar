@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\WebinarRegistrant;
+use App\Services\FonnteService;
+use Illuminate\Support\Facades\Log;
 
 class MidtransCallbackController extends Controller
 {
@@ -31,9 +33,26 @@ class MidtransCallbackController extends Controller
                 // Berikan cashback ke pemilik kode referral jika ada
                 if (!empty($registrant->referred_by)) {
                     $referrer = WebinarRegistrant::where('referral_code', $registrant->referred_by)->first();
-                    if ($referrer) {
-                        $referrer->increment('cashback', 5000);
+                    if ($referrer && $referrer->cashback < 50000) {
+                        $increment = min(5000, 50000 - $referrer->cashback);
+                        if ($increment > 0) {
+                            $referrer->increment('cashback', $increment);
+                        }
                     }
+                }
+                // Kirim pesan WhatsApp via Fonnte
+                try {
+                    $fonnte = new FonnteService();
+                    $pesan = "Terima kasih, pembayaran Anda telah berhasil!\n\n"
+                        . "Nama: {$registrant->name}\n"
+                        . "Email: {$registrant->email}\n"
+                        . "Status: Lunas\n"
+                        . "Produk: Webinar gak pakai AI sama dengan jemput bangkrut\n"
+                        . "Kode Referral Anda: {$registrant->referral_code}";
+                    $fonnte->sendMessage($registrant->phone, $pesan);
+                } catch (\Exception $e) {
+                    // Log error jika gagal kirim pesan
+                    Log::error('Gagal kirim WA Fonnte: ' . $e->getMessage());
                 }
             } elseif (in_array($request->transaction_status, ['deny', 'cancel', 'expire'])) {
                 $registrant->is_paid = 9;

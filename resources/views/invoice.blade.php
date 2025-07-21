@@ -28,7 +28,7 @@
                 </tr>
                 <tr>
                     <td class="py-1 font-semibold text-gray-700">Nama Produk</td>
-                    <td>: {{ $registrant->product_name ?? 'Webinar Bisnis' }}</td>
+                    <td>: {{ $registrant->product_name ?? 'Webinar gak pakai AI sama dengan jemput bangkrut' }}</td>
                 </tr>
                 <tr>
                     <td class="py-1 font-semibold text-gray-700">Harga</td>

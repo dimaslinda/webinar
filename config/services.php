@@ -41,6 +41,11 @@ return [
         'client_key' => env('MIDTRANS_CLIENT_KEY'),
         'server_key' => env('MIDTRANS_SERVER_KEY'),
         'is_production' => env('MIDTRANS_IS_PRODUCTION', false),
+        'price' => env('WEBINAR_PRICE', 50000),
+    ],
+    // Integrasi Fonnte
+    'fonnte' => [
+        'api_key' => env('FONNTE_API_KEY'),
     ],
 
 ];
