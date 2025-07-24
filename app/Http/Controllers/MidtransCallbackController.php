@@ -33,11 +33,10 @@ class MidtransCallbackController extends Controller
                 // Berikan cashback ke pemilik kode referral jika ada
                 if (!empty($registrant->referred_by)) {
                     $referrer = WebinarRegistrant::where('referral_code', $registrant->referred_by)->first();
-                    if ($referrer && $referrer->cashback < 50000) {
-                        $increment = min(5000, 50000 - $referrer->cashback);
-                        if ($increment > 0) {
-                            $referrer->increment('cashback', $increment);
-                        }
+                    if ($referrer) {
+                        // Cashback 10% dari harga bootcamp (2.300.000 * 10% = 230.000)
+                        $cashbackAmount = 230000;
+                        $referrer->increment('cashback', $cashbackAmount);
                     }
                 }
                 // Kirim pesan WhatsApp via Fonnte
@@ -47,7 +46,7 @@ class MidtransCallbackController extends Controller
                         . "Nama: {$registrant->name}\n"
                         . "Email: {$registrant->email}\n"
                         . "Status: Lunas\n"
-                        . "Produk: Webinar gak pakai AI sama dengan jemput bangkrut\n"
+                        . "Produk: Bootcamp Market Hacking with AI\n"
                         . "Kode Referral Anda: {$registrant->referral_code}";
                     $fonnte->sendMessage($registrant->phone, $pesan);
                 } catch (\Exception $e) {

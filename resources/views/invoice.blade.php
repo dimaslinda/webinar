@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invoice Pembayaran Webinar</title>
+    <title>Invoice Pembayaran Bootcamp</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -14,7 +14,7 @@
             <div class="flex justify-center mb-4">
                 <img src="/img/general/logo-invoice.png" alt="Logo" class="h-16">
             </div>
-            <h2 class="text-2xl font-bold mb-2 text-[#084e49] text-center">Invoice Pembayaran Webinar</h2>
+            <h2 class="text-2xl font-bold mb-2 text-[#084e49] text-center">Invoice Pembayaran Bootcamp</h2>
             <div class="w-16 h-1 mx-auto mb-4 rounded-full" style="background:#f46619;"></div>
             <p class="mb-6 text-center text-[#f46619]">Berikut adalah detail pembayaran Anda.</p>
             <table class="mb-6 w-full">
@@ -28,11 +28,11 @@
                 </tr>
                 <tr>
                     <td class="py-1 font-semibold text-gray-700">Nama Produk</td>
-                    <td>: {{ $registrant->product_name ?? 'Webinar gak pakai AI sama dengan jemput bangkrut' }}</td>
+                    <td>: {{ $registrant->product_name ?? 'Bootcamp Market Hacking with AI' }}</td>
                 </tr>
                 <tr>
                     <td class="py-1 font-semibold text-gray-700">Harga</td>
-                    <td>: Rp{{ number_format($registrant->product_price ?? 50000, 0, ',', '.') }}</td>
+                    <td>: Rp{{ number_format($registrant->product_price ?? 2300000, 0, ',', '.') }}</td>
                 </tr>
                 <tr>
                     <td class="py-1 font-semibold text-gray-700">Kode Referral</td>

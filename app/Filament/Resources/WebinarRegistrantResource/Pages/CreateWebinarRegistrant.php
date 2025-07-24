@@ -18,6 +18,12 @@ class CreateWebinarRegistrant extends CreateRecord
     {
         // Generate kode referral unik untuk user baru
         $data['referral_code'] = $this->generateReferralCode();
+        
+        // Set product details
+        $data['product_name'] = 'Bootcamp Market Hacking with AI';
+        $data['product_price'] = config('services.midtrans.price', 2300000);
+        $data['order_id'] = 'Bootcamp-' . uniqid();
+        $data['invoice_token'] = \Illuminate\Support\Str::uuid();
 
         // Logika referral: validasi kode referral saja, tanpa pemberian cashback di sini
         if (!empty($data['referred_by'])) {
@@ -49,8 +55,8 @@ class CreateWebinarRegistrant extends CreateRecord
         // Siapkan parameter pembayaran
         $params = [
             'transaction_details' => [
-                'order_id' => 'WEBINAR-' . $registrant->id . '-' . time(),
-                'gross_amount' => 50000, // Nominal pembayaran
+                'order_id' => $registrant->order_id,
+                'gross_amount' => $registrant->product_price, // Nominal pembayaran
             ],
             'customer_details' => [
                 'first_name' => $registrant->name,

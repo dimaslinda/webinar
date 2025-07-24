@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Invoice Pembayaran Webinar</title>
+    <title>Invoice Pembayaran Bootcamp</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -73,9 +73,9 @@
     <div class="header">
         <img src="{{ public_path('img/general/logo-invoice.png') }}" alt="Logo"
             style="height:60px; margin-bottom:12px;">
-        <div class="title">Invoice Pembayaran Webinar</div>
+        <div class="title">Invoice Pembayaran Bootcamp</div>
         <div class="divider"></div>
-        <div class="subtitle">Bukti pembayaran peserta webinar</div>
+        <div class="subtitle">Bukti pembayaran peserta bootcamp</div>
     </div>
     <table>
         <tr>
@@ -126,7 +126,7 @@
         </tr>
     </table>
     <div class="footer">
-        Invoice ini di-generate otomatis oleh sistem webinar.<br>
+        Invoice ini di-generate otomatis oleh sistem bootcamp.<br>
         Tanggal: {{ date('d-m-Y H:i') }}
     </div>
 </body>

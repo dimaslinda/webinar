@@ -17,7 +17,7 @@ class WebinarStatsOverview extends BaseWidget
         $totalReferral = WebinarRegistrant::whereHas('downlines', function ($q) {
             $q->where('is_paid', true);
         })->count();
-        $totalOmzet = WebinarRegistrant::where('is_paid', true)->count() * 50000;
+        $totalOmzet = WebinarRegistrant::where('is_paid', true)->sum('product_price');
 
         return [
             Card::make('Total Peserta', $totalPeserta),
