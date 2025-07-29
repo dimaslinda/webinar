@@ -41,6 +41,9 @@
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     @php
         $schema = [
             '@context' => 'https://schema.org',
@@ -411,47 +414,221 @@
                     <span class="text-white bg-primary font-bold leading-snug px-2">alumnni</span>
                 </div>
             </div>
-            <div class="flex flex-col md:flex-row justify-center gap-5 mt-20 relative">
+            <!-- Swiper Container -->
+            <div class="relative mt-20">
                 <div class="absolute top-1/2 left-0 xl:left-20 2xl:left-52 transform -translate-y-1/2">
                     <img src="{{ asset('img/general/clips3.webp') }}" alt="clips3">
                 </div>
-                <div
-                    class="bg-biru rounded-lg relative z-10 shadow-lg p-8 w-full max-w-sm flex flex-col justify-center items-center">
-                    <div class="mb-5 bg-white rounded-full w-32 h-32 flex items-center justify-center overflow-hidden">
-                        <img src="{{ asset('img/general/nuh.webp') }}" class="w-full h-full object-cover"
-                            alt="nuh">
-                    </div>
-                    <div class="text-white text-2xl md:text-4xl font-bold">
-                        Nuh Akbar
-                    </div>
-                    <div class="text-white font-light text-xl mb-5">
-                        Pemilik Brand Kontraktor
-                    </div>
-                    <div class="text-white italic font-light text-justify text-sm leading-normal">
-                        Sebelumnya saya hanya tahu ChatGPT sebatas iseng. Tapi setelah ikut sesi ini, langsung bisa
-                        bikin kalender konten dan ngerjain 3 kampanye promosi dalam sehari.
-                    </div>
-                </div>
-
-                <div
-                    class="bg-biru rounded-lg relative z-10 shadow-lg p-8 w-full max-w-sm flex flex-col justify-center items-center">
-                    <div class="mb-5 bg-white rounded-full w-32 h-32 flex items-center justify-center overflow-hidden">
-                        <img src="{{ asset('img/general/amna.webp') }}" class="w-full h-full object-cover"
-                            alt="nuh">
-                    </div>
-                    <div class="text-white text-2xl md:text-4xl font-bold">
-                        Amna Hamdalah
-                    </div>
-                    <div class="text-white font-light text-xl mb-5">
-                        Mudir Rumah Qur'an Prapanca
-                    </div>
-                    <div class="text-white italic font-light text-justify text-sm leading-normal">
-                        Gak pakai teori panjang. Langsung praktik. Hasilnya? Dalam 1 minggu saya sudah pakai semua
-                        tools-nya.
-                    </div>
-                </div>
                 <div class="absolute top-1/2 right-0 xl:right-20 2xl:right-52 transform -translate-y-1/2">
                     <img src="{{ asset('img/general/clips3.webp') }}" alt="clips3">
+                </div>
+
+                <div class="swiper testimonialSwiper">
+                    <div class="swiper-wrapper">
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide">
+                            <div class="flex justify-center">
+                                <div
+                                    class="bg-biru rounded-lg md:h-[500px] relative z-10 shadow-lg p-8 w-full max-w-sm flex flex-col justify-center items-center">
+                                    <div
+                                        class="mb-5 bg-white rounded-full w-32 h-32 flex items-center justify-center overflow-hidden">
+                                        <img src="{{ asset('img/general/nuh.webp') }}"
+                                            class="w-full h-full object-cover" alt="nuh">
+                                    </div>
+                                    <div class="text-white text-2xl md:text-4xl font-bold">
+                                        Nuh Akbar
+                                    </div>
+                                    <div class="text-white font-light text-xl mb-5">
+                                        Pemilik Brand Kontraktor
+                                    </div>
+                                    <div class="text-white italic font-light text-justify text-sm leading-normal">
+                                        Sebelumnya saya hanya tahu ChatGPT sebatas iseng. Tapi setelah ikut sesi ini,
+                                        langsung bisa
+                                        bikin kalender konten dan ngerjain 3 kampanye promosi dalam sehari.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide">
+                            <div class="flex justify-center">
+                                <div
+                                    class="bg-biru rounded-lg md:h-[500px] relative z-10 shadow-lg p-8 w-full max-w-sm flex flex-col justify-center items-center">
+                                    <div
+                                        class="mb-5 bg-white rounded-full w-32 h-32 flex items-center justify-center overflow-hidden">
+                                        <img src="{{ asset('img/general/amna.webp') }}"
+                                            class="w-full h-full object-cover" alt="amna">
+                                    </div>
+                                    <div class="text-white text-2xl md:text-4xl font-bold">
+                                        Amna Hamdalah
+                                    </div>
+                                    <div class="text-white font-light text-xl mb-5">
+                                        Mudir Rumah Qur'an Prapanca
+                                    </div>
+                                    <div class="text-white italic font-light text-justify text-sm leading-normal">
+                                        Gak pakai teori panjang. Langsung praktik. Hasilnya? Dalam 1 minggu saya sudah
+                                        pakai semua
+                                        tools-nya.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide">
+                            <div class="flex justify-center">
+                                <div
+                                    class="bg-biru rounded-lg md:h-[500px] text-center relative z-10 shadow-lg p-8 w-full max-w-sm flex flex-col justify-center items-center">
+                                    <div
+                                        class="mb-5 bg-white rounded-full w-32 h-32 flex items-center justify-center overflow-hidden">
+                                        <img src="{{ asset('img/general/miftahul.webp') }}"
+                                            class="w-full h-full object-cover" alt="testimonial">
+                                    </div>
+                                    <div class="text-white text-2xl md:text-4xl font-bold">
+                                        Miftahul Irsyad
+                                    </div>
+                                    <div class="text-white font-light text-xl mb-5">
+                                        Co Founder PT. Rindu Haji Umrah
+                                    </div>
+                                    <div class="text-white italic font-light text-justify text-sm leading-normal">
+                                        Webinarnya okee baguss, pokoknya mantepp bener2 dajarin step by stepnyaa bahkan
+                                        banyak bonusnyaa
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="swiper-slide">
+                            <div class="flex justify-center">
+                                <div
+                                    class="bg-biru rounded-lg md:h-[500px] relative z-10 shadow-lg p-8 w-full max-w-sm flex flex-col justify-center items-center">
+                                    <div
+                                        class="mb-5 bg-white rounded-full w-32 h-32 flex items-center justify-center overflow-hidden">
+                                        <img src="{{ asset('img/general/wa.webp') }}"
+                                            class="w-full h-full object-cover" alt="testimonial">
+                                    </div>
+                                    <div class="text-white text-2xl md:text-4xl font-bold">
+                                        Budi Santoso
+                                    </div>
+                                    <div class="text-white font-light text-xl mb-5">
+                                        Mudir Ma'had Riyadusholihin
+                                    </div>
+                                    <div class="text-white italic font-light text-justify text-sm leading-normal">
+                                        Saya suka pendekatan yang diterapkan di webinar ini oleh Coach Rifky yang 70%
+                                        praktek dan 30% teori. Jadi bukan cuma teori belaka, tapi benar-benar dibimbing
+                                        step-by-step cara go to market bisnis pakai bantuan AI. Saya langsung mau
+                                        terapkan ke campaign marketing bisnis saya saya. Mantap banget!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 1 -->
+                        <div class="swiper-slide">
+                            <div class="flex justify-center">
+                                <div
+                                    class="bg-biru rounded-lg md:h-[500px] relative z-10 shadow-lg p-8 w-full max-w-sm flex flex-col justify-center items-center">
+                                    <div
+                                        class="mb-5 bg-white rounded-full w-32 h-32 flex items-center justify-center overflow-hidden">
+                                        <img src="{{ asset('img/general/nuh.webp') }}"
+                                            class="w-full h-full object-cover" alt="nuh">
+                                    </div>
+                                    <div class="text-white text-2xl md:text-4xl font-bold">
+                                        Nuh Akbar
+                                    </div>
+                                    <div class="text-white font-light text-xl mb-5">
+                                        Pemilik Brand Kontraktor
+                                    </div>
+                                    <div class="text-white italic font-light text-justify text-sm leading-normal">
+                                        Sebelumnya saya hanya tahu ChatGPT sebatas iseng. Tapi setelah ikut sesi ini,
+                                        langsung bisa
+                                        bikin kalender konten dan ngerjain 3 kampanye promosi dalam sehari.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="swiper-slide">
+                            <div class="flex justify-center">
+                                <div
+                                    class="bg-biru rounded-lg md:h-[500px] relative z-10 shadow-lg p-8 w-full max-w-sm flex flex-col justify-center items-center">
+                                    <div
+                                        class="mb-5 bg-white rounded-full w-32 h-32 flex items-center justify-center overflow-hidden">
+                                        <img src="{{ asset('img/general/amna.webp') }}"
+                                            class="w-full h-full object-cover" alt="amna">
+                                    </div>
+                                    <div class="text-white text-2xl md:text-4xl font-bold">
+                                        Amna Hamdalah
+                                    </div>
+                                    <div class="text-white font-light text-xl mb-5">
+                                        Mudir Rumah Qur'an Prapanca
+                                    </div>
+                                    <div class="text-white italic font-light text-justify text-sm leading-normal">
+                                        Gak pakai teori panjang. Langsung praktik. Hasilnya? Dalam 1 minggu saya sudah
+                                        pakai semua
+                                        tools-nya.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="swiper-slide">
+                            <div class="flex justify-center">
+                                <div
+                                    class="bg-biru rounded-lg md:h-[500px] text-center relative z-10 shadow-lg p-8 w-full max-w-sm flex flex-col justify-center items-center">
+                                    <div
+                                        class="mb-5 bg-white rounded-full w-32 h-32 flex items-center justify-center overflow-hidden">
+                                        <img src="{{ asset('img/general/miftahul.webp') }}"
+                                            class="w-full h-full object-cover" alt="testimonial">
+                                    </div>
+                                    <div class="text-white text-2xl md:text-4xl font-bold">
+                                        Miftahul Irsyad
+                                    </div>
+                                    <div class="text-white font-light text-xl mb-5">
+                                        Co Founder PT. Rindu Haji Umrah
+                                    </div>
+                                    <div class="text-white italic font-light text-justify text-sm leading-normal">
+                                        Webinarnya okee baguss, pokoknya mantepp bener2 dajarin step by stepnyaa bahkan
+                                        banyak bonusnyaa
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="swiper-slide">
+                            <div class="flex justify-center">
+                                <div
+                                    class="bg-biru rounded-lg md:h-[500px] relative z-10 shadow-lg p-8 w-full max-w-sm flex flex-col justify-center items-center">
+                                    <div
+                                        class="mb-5 bg-white rounded-full w-32 h-32 flex items-center justify-center overflow-hidden">
+                                        <img src="{{ asset('img/general/wa.webp') }}"
+                                            class="w-full h-full object-cover" alt="testimonial">
+                                    </div>
+                                    <div class="text-white text-2xl md:text-4xl font-bold">
+                                        Budi Santoso
+                                    </div>
+                                    <div class="text-white font-light text-xl mb-5">
+                                        Mudir Ma'had Riyadusholihin
+                                    </div>
+                                    <div class="text-white italic font-light text-justify text-sm leading-normal">
+                                        Saya suka pendekatan yang diterapkan di webinar ini oleh Coach Rifky yang 70%
+                                        praktek dan 30% teori. Jadi bukan cuma teori belaka, tapi benar-benar dibimbing
+                                        step-by-step cara go to market bisnis pakai bantuan AI. Saya langsung mau
+                                        terapkan ke campaign marketing bisnis saya saya. Mantap banget!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
             </div>
         </div>
@@ -608,6 +785,86 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.testimonialSwiper', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 3,
+            loop: true,
+            spaceBetween: 30,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1.5,
+                slideShadows: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    coverflowEffect: {
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1,
+                        slideShadows: false,
+                    },
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                    coverflowEffect: {
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 200,
+                        modifier: 1.5,
+                        slideShadows: false,
+                    },
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                    coverflowEffect: {
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 250,
+                        modifier: 1.8,
+                        slideShadows: false,
+                    },
+                },
+                1280: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                    coverflowEffect: {
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 300,
+                        modifier: 2,
+                        slideShadows: false,
+                    },
+                },
+            }
+        });
+    </script>
 </body>
 
 </html>

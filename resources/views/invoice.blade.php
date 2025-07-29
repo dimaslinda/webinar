@@ -32,7 +32,7 @@
                 </tr>
                 <tr>
                     <td class="py-1 font-semibold text-gray-700">Harga</td>
-                    <td>: Rp{{ number_format($registrant->product_price ?? 2300000, 0, ',', '.') }}</td>
+                    <td>: Rp{{ number_format($registrant->product_price ?? 2500000, 0, ',', '.') }}</td>
                 </tr>
                 <tr>
                     <td class="py-1 font-semibold text-gray-700">Kode Referral</td>

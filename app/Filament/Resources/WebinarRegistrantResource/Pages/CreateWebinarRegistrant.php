@@ -21,7 +21,7 @@ class CreateWebinarRegistrant extends CreateRecord
         
         // Set product details
         $data['product_name'] = 'Bootcamp Market Hacking with AI';
-        $data['product_price'] = config('services.midtrans.price', 2300000);
+        $data['product_price'] = config('services.midtrans.price', 2500000);
         $data['order_id'] = 'Bootcamp-' . uniqid();
         $data['invoice_token'] = \Illuminate\Support\Str::uuid();
 

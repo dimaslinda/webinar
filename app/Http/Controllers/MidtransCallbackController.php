@@ -34,8 +34,8 @@ class MidtransCallbackController extends Controller
                 if (!empty($registrant->referred_by)) {
                     $referrer = WebinarRegistrant::where('referral_code', $registrant->referred_by)->first();
                     if ($referrer) {
-                        // Cashback 10% dari harga bootcamp (2.300.000 * 10% = 230.000)
-                        $cashbackAmount = 230000;
+                        // Cashback 10% dari harga bootcamp (2.500.000 * 10% = 250.000)
+                        $cashbackAmount = 250000;
                         $referrer->increment('cashback', $cashbackAmount);
                     }
                 }

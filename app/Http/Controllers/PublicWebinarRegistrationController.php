@@ -59,7 +59,7 @@ class PublicWebinarRegistrationController extends Controller
             $data['invoice_token'] = Str::uuid();
 
             $newRegistrant = new WebinarRegistrant($data);
-            $price = config('services.midtrans.price', 2300000);
+            $price = config('services.midtrans.price', 2500000);
             $orderId = 'Bootcamp-' . Str::uuid();
             $newRegistrant->order_id = $orderId;
             $newRegistrant->product_name = 'Bootcamp Market Hacking with AI';
