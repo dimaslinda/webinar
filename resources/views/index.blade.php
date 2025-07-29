@@ -610,7 +610,7 @@
                                             class="w-full h-full object-cover" alt="testimonial">
                                     </div>
                                     <div class="text-white text-2xl md:text-4xl font-bold">
-                                        Budi Santoso
+                                        Fadli
                                     </div>
                                     <div class="text-white font-light text-xl mb-5">
                                         Mudir Ma'had Riyadusholihin
