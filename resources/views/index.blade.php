@@ -439,7 +439,7 @@
                                         Nuh Akbar
                                     </div>
                                     <div class="text-white font-light text-xl mb-5">
-                                        Pemilik Brand Kontraktor
+                                        Direktur Maestro Kontraktor
                                     </div>
                                     <div class="text-white italic font-light text-justify text-sm leading-normal">
                                         Sebelumnya saya hanya tahu ChatGPT sebatas iseng. Tapi setelah ikut sesi ini,
@@ -510,7 +510,7 @@
                                             class="w-full h-full object-cover" alt="testimonial">
                                     </div>
                                     <div class="text-white text-2xl md:text-4xl font-bold">
-                                        Budi Santoso
+                                        Fadli
                                     </div>
                                     <div class="text-white font-light text-xl mb-5">
                                         Mudir Ma'had Riyadusholihin
@@ -539,7 +539,7 @@
                                         Nuh Akbar
                                     </div>
                                     <div class="text-white font-light text-xl mb-5">
-                                        Pemilik Brand Kontraktor
+                                        Direktur Maestro Kontraktor
                                     </div>
                                     <div class="text-white italic font-light text-justify text-sm leading-normal">
                                         Sebelumnya saya hanya tahu ChatGPT sebatas iseng. Tapi setelah ikut sesi ini,
